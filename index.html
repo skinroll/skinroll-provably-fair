@@ -45,7 +45,6 @@
 <div class="wrap">
   <div class="lang">
     <button id="btnEn" class="on" onclick="setLang('en')">EN</button>
-    <button id="btnZh" onclick="setLang('zh')">中文</button>
   </div>
   <h1 id="h1">Provably Fair Verifier</h1>
   <div class="sub" id="sub">Verify any roll independently — all computation happens in your browser.</div>
@@ -142,8 +141,7 @@ const T = {
 let lang = "en";
 function setLang(l) {
   lang = l;
-  document.getElementById("btnEn").className = l === "en" ? "on" : "";
-  document.getElementById("btnZh").className = l === "zh" ? "on" : "";
+  document.getElementById("btnEn").className = "on";
   const t = T[l];
   for (const k of Object.keys(t)) {
     const el = document.getElementById(k);
